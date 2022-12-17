@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const express = require("express");
+const cors = require("cors");
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 
@@ -8,6 +9,7 @@ const app = express();
 const PORT = process.env.port || 5000;
 
 app.use(express.json());
+app.use(cors());
 
 const DB =
   "mongodb+srv://Gagan_Saini:gaganiscoder@cluster0.afqpweg.mongodb.net/Impact?retryWrites=true&w=majority";
